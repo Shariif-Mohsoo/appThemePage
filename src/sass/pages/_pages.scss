@@ -1,0 +1,55 @@
+@use "../abstracts/" as *;
+.container {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns:
+    [body-start] 1fr [center-start] repeat(
+      7,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    [center-end] 1fr [body-end];
+  grid-template-rows: min-content repeat(4, min-content);
+}
+.header {
+  grid-column: body-start/body-end;
+}
+.showcase {
+  grid-column: body-start/body-end;
+}
+.features {
+  grid-column: center-start / center-end;
+  padding: 4rem;
+}
+.gurantee {
+  background-image: url(../../../images/images.jpg);
+  grid-column: body-start/body-end;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 8rem 4rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(min-content, 1fr));
+  grid-column-gap: 20%;
+  @media only screen and (max-width: 44em) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.footer {
+  grid-column: body-start/body-end;
+}
+::-webkit-scrollbar {
+  width: 1rem;
+}
+::-webkit-scrollbar-track {
+  background-color: #fff;
+  border-radius: 10rem;
+}
+::-webkit-scrollbar-button {
+  background-color: $color-primary-dark;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $color-primary;
+}

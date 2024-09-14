@@ -1,0 +1,39 @@
+@use "../abstracts/" as *;
+.showcase {
+  color: $color-white;
+  &__container {
+    position: relative;
+    overflow: hidden;
+    border-top: 0.3rem solid $color-primary-dark;
+    border-bottom: 0.3rem solid $color-primary-dark;
+  }
+  &__img {
+    display: block;
+    width: 100vw;
+  }
+  &__heading {
+    display: block;
+    font-size: 4rem;
+    @media only screen and (max-width: 47em) {
+      font-size: 2rem;
+    }
+  }
+  &__theme {
+    background-color: rgba($color-black, 0.8);
+    border-radius: 100px;
+    padding: 2rem 3rem;
+    @include centerTheDiv;
+    text-align: center;
+    @media only screen and (max-width: 32em) {
+      width: 80%;
+    }
+  }
+  &__text {
+    font-size: 1.6rem;
+    display: block;
+
+    @media only screen and (max-width: 47em) {
+      font-size: 1.2rem;
+    }
+  }
+}

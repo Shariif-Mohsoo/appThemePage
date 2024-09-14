@@ -1,0 +1,350 @@
+.container {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: [body-start] 1fr [center-start] repeat(7, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [body-end];
+  grid-template-rows: min-content repeat(4, min-content);
+}
+
+.header {
+  grid-column: body-start/body-end;
+}
+
+.showcase {
+  grid-column: body-start/body-end;
+}
+
+.features {
+  grid-column: center-start/center-end;
+  padding: 4rem;
+}
+
+.gurantee {
+  background-image: url(../../../images/images.jpg);
+  grid-column: body-start/body-end;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 8rem 4rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(min-content, 1fr));
+  grid-column-gap: 20%;
+}
+@media only screen and (max-width: 44em) {
+  .gurantee {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.footer {
+  grid-column: body-start/body-end;
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fff;
+  border-radius: 10rem;
+}
+
+::-webkit-scrollbar-button {
+  background-color: #148f77;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #58d68d;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+@media only screen and (max-width: 60em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width: 44em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+  box-sizing: border-box;
+  line-height: 1.4;
+}
+
+::selection {
+  background-color: #58d68d;
+  color: #7b7d7d;
+}
+
+.header .container {
+  padding: 1rem 0;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+@media only screen and (max-width: 19em) {
+  .header .container {
+    flex-direction: column;
+  }
+}
+
+.heading-1 {
+  font-size: 3rem;
+  color: #000;
+}
+
+.logo {
+  color: #58d68d;
+}
+.logo__dark {
+  color: #148f77;
+}
+
+.footer__1 {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 2rem;
+  color: #fff;
+}
+.footer__heading {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.footer__contact {
+  font-size: 1.3rem;
+}
+.footer__text {
+  font-size: 1.3rem;
+  text-align: justify;
+}
+.footer__newsletter {
+  margin-left: auto;
+}
+.footer__newsletter-box {
+  display: flex;
+  align-items: center;
+}
+@media only screen and (max-width: 44em) {
+  .footer__newsletter {
+    margin-left: 0;
+  }
+}
+.footer__icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  fill: #fff;
+}
+.footer__input, .footer__button {
+  padding: 0 1rem;
+  border: none;
+  outline: none;
+  height: 6rem;
+}
+.footer__input {
+  font-size: 1.6rem;
+  font-family: "Times New Roman", Times, serif;
+  color: #7b7d7d;
+  padding-left: 0.5rem;
+}
+.footer__button {
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-family: "Times New Roman", Times, serif;
+  background-image: linear-gradient(to right bottom, #58d68d, #148f77);
+}
+.footer__2 {
+  background-color: #148f77;
+  padding: 2rem 0;
+}
+.footer__copyright {
+  text-align: center;
+  color: #fff;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.navbar {
+  padding: 1.2rem;
+  align-items: center;
+  justify-content: baseline;
+}
+.navbar__list {
+  list-style: none;
+  display: flex;
+}
+.navbar__item {
+  font-size: 1.5rem;
+  position: relative;
+}
+.navbar__item:not(:last-child) {
+  margin-right: 1.2rem;
+}
+.navbar__item::before {
+  display: inline-block;
+  content: "";
+  background-color: #58d68d;
+  height: 0.4rem;
+  width: 0;
+  position: absolute;
+  bottom: -0.3rem;
+  left: 0;
+  transition: width 0.3s ease-out;
+}
+.navbar__item:hover::before {
+  width: 100%;
+}
+.navbar__link:link, .navbar__link:active {
+  display: inline-block;
+  text-decoration: none;
+  color: #979a9a;
+  transition: all 0.3s ease;
+}
+.navbar__link:link:hover, .navbar__link:active:hover {
+  transform: translateY(-0.5rem);
+  color: #7b7d7d;
+}
+
+.showcase {
+  color: #fff;
+}
+.showcase__container {
+  position: relative;
+  overflow: hidden;
+  border-top: 0.3rem solid #148f77;
+  border-bottom: 0.3rem solid #148f77;
+}
+.showcase__img {
+  display: block;
+  width: 100vw;
+}
+.showcase__heading {
+  display: block;
+  font-size: 4rem;
+}
+@media only screen and (max-width: 47em) {
+  .showcase__heading {
+    font-size: 2rem;
+  }
+}
+.showcase__theme {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 100px;
+  padding: 2rem 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+@media only screen and (max-width: 32em) {
+  .showcase__theme {
+    width: 80%;
+  }
+}
+.showcase__text {
+  font-size: 1.6rem;
+  display: block;
+}
+@media only screen and (max-width: 47em) {
+  .showcase__text {
+    font-size: 1.2rem;
+  }
+}
+
+.features__first {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.features__heading {
+  font-size: 2.5rem;
+  letter-spacing: 0.2rem;
+}
+.features__second {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  justify-content: center;
+  grid-gap: 4rem;
+}
+.features_box {
+  box-shadow: 0 0.5rem 2rem #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.features__icon {
+  height: 8rem;
+  width: 8rem;
+  fill: #58d68d;
+}
+.features__heading-main {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+.gurantee_1 {
+  display: flex;
+  justify-content: end;
+}
+.gurantee__photo-box {
+  overflow: hidden;
+  border: 0.5rem solid #7b7d7d;
+  height: 40rem;
+  width: 25rem;
+  border-radius: 2rem;
+}
+.gurantee__photo {
+  height: 100%;
+  width: 100%;
+}
+.gurantee_2 {
+  justify-self: start;
+  padding: 3rem;
+  color: #fff;
+  text-align: center;
+}
+.gurantee__list {
+  list-style: none;
+  text-align: center;
+}
+.gurantee__item {
+  margin-bottom: 0.8rem;
+  font-size: 1.7rem;
+  font-weight: 400;
+  position: relative;
+}
+.gurantee__item::before {
+  content: "";
+  display: inline-block;
+  height: 2rem;
+  width: 1.7rem;
+  margin-right: 0.5rem;
+  -webkit-mask-image: url(../../../images/SVG/chevron-circle-right.svg);
+  -webkit-mask-size: cover;
+  background-color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */

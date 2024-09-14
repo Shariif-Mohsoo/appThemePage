@@ -1,0 +1,89 @@
+@use "../abstracts/" as *;
+.features {
+  &__first {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  &__heading {
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
+  }
+
+  &__second {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    justify-content: center;
+    grid-gap: 4rem;
+  }
+  &_box {
+    box-shadow: 0 0.5rem 2rem #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  &__icon {
+    height: 8rem;
+    width: 8rem;
+    fill: $color-primary;
+  }
+  &__heading {
+    &-main {
+      text-transform: uppercase;
+      font-weight: 900;
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    }
+  }
+}
+//for guarantee of features
+.gurantee {
+  &_1 {
+    display: flex;
+    justify-content: end;
+  }
+  &__photo-box {
+    overflow: hidden;
+    border: 0.5rem solid $color-grey-dark-1;
+    height: 40rem;
+    width: 25rem;
+    border-radius: 2rem;
+  }
+  &__photo {
+    height: 100%;
+    width: 100%;
+    // border-radius: 2rem;
+  }
+  &_2 {
+    justify-self: start;
+    padding: 3rem;
+    color: $color-white;
+    text-align: center;
+  }
+  &__list {
+    list-style: none;
+    text-align: center;
+  }
+  &__item {
+    margin-bottom: 0.8rem;
+    font-size: 1.7rem;
+    font-weight: 400;
+    position: relative;
+    &::before {
+      content: "";
+      display: inline-block;
+      height: 2rem;
+      width: 1.7rem;
+      margin-right: 0.5rem;
+      // background-image: url(../../../images/SVG/chevron-circle-right.svg);
+      // background-size: cover;
+      -webkit-mask-image: url(../../../images/SVG/chevron-circle-right.svg);
+      -webkit-mask-size: cover;
+      background-color: #fff;
+      // -webkit-mask-image: url(../../../images/SVG/checkmark.svg);
+      // -webkit-mask-size: cover;
+    }
+  }
+}

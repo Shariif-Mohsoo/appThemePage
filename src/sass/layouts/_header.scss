@@ -1,0 +1,24 @@
+@use "../abstracts/" as *;
+.header {
+  .container {
+    padding: 1rem 0;
+    background-color: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    @media only screen and (max-width: 19em) {
+      flex-direction: column;
+    }
+  }
+}
+
+.heading-1 {
+  font-size: 3rem;
+  color: $color-black;
+}
+.logo {
+  color: $color-primary;
+  &__dark {
+    color: $color-primary-dark;
+  }
+}
